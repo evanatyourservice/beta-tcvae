@@ -1,0 +1,8 @@
+visdom
+matplotlib
+numpy
+torch
+torchvision
+brewer2mpl
+kron-torch
+wandb

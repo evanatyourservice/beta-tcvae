@@ -7,7 +7,7 @@ This repository contains cleaned-up code for reproducing the quantitative experi
 To train a model:
 
 ```
-python vae_quant.py --dataset [shapes/faces] --beta 6 --tcvae
+WANDB_API_KEY=<your_api_key> && python vae_quant.py --dataset shapes --beta 6 --tcvae
 ```
 Specify `--conv` to use the convolutional VAE. We used a mlp for dSprites and conv for 3d faces. To see all options, use the `-h` flag.
 
@@ -18,6 +18,10 @@ To evaluate the MIG of a model:
 python disentanglement_metrics.py --checkpt [checkpt]
 ```
 To see all options, use the `-h` flag.
+
+```
+python plot_latent_vs_true.py -checkpt shapes_20250219_213534/checkpt-0000.pth -elbo_decomp
+```
 
 ## Datasets
 
